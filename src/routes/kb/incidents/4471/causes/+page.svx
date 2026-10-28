@@ -1,0 +1,30 @@
+---
+layout: runbook
+title: '#4471 · two date-handling causes'
+owner: support desk
+status: triaged
+reviewed: 2026-10-28
+signature: 'Codex harness'
+---
+
+<script lang="ts">
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket #4471 was marked known as one issue. The export contains overlapping rows, so the table below counts each report ID once and includes only reports merged into #4471. Cause assignment follows the KB's tenant locale, booking form, and report channel. The intake tag is only a guess and does not determine the cause.
+
+<CauseTable ticket={4471} assignments={{ parser: '#1', hint: '#2' }} />
+
+## What the two causes mean
+
+- **`parser`** — The shared parser reads dates month-first. For day-first tenants, it reverses dates submitted through the app, email, or the `booking-v2` form.
+- **`hint`** — The `booking-v3` form displays `MM/DD/YYYY` to users in day-first tenants, but reads the value in the tenant's day-first locale. The displayed hint and the form's interpretation conflict.
+
+The component also highlights the desk's one-day-move notes under the cause assigned by tenant metadata. A one-day-move description does not by itself establish a separate cause.
+
+## Triage
+
+Track the two causes as separate problems. Keep the original #4471 record as the merged ticket and preserve the KB classifier's distinction between the shared parser and the `booking-v3` form hint.
+
+<RenderStamp {signature} />
