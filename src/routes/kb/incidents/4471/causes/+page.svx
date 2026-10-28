@@ -4,7 +4,7 @@ title: '#4471 · two date-handling causes'
 owner: support desk
 status: closed
 reviewed: 2026-10-28
-signature: 'Codex harness'
+signature: 'v1.eyJzdWIiOiIyMjUwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTM3MzEsImV4cCI6MTc5MzMwMDEzMX0.XaGp_O_pNyqdJdkOGSfHU6ZxTBz8QBX7Rv1-l6Pg6jY'
 ---
 
 <script lang="ts">

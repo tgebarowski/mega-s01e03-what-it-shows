@@ -22,6 +22,6 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-
 <ul><li><strong><code>parser</code></strong> — The shared parser reads dates month-first. For day-first tenants, it reverses dates submitted through the app, email, or the <code>booking-v2</code> form.</li><li><strong><code>hint</code></strong> — The <code>booking-v3</code> form displays <code>MM/DD/YYYY</code> to users in day-first tenants, but reads the value in the tenant's day-first locale. The displayed hint and the form's interpretation conflict.</li></ul>
 <p>The component also highlights the desk's one-day-move notes under the cause assigned by tenant metadata. A one-day-move description does not by itself establish a separate cause.</p>
 <h2>Engineering update</h2><p>The desk closed #4471 on 5 October. The <code>parser</code> cause was fixed by <code>fix(dates): parse dd/mm for eu locales</code>. The <code>hint</code> cause will not be fixed because the <code>booking-v3</code> form was retired.</p><h2>Triage</h2><p>Issue #1 records the parser fix. Issue #2 records the retired-form outcome. Keep both causes distinct in the KB even though the support desk first merged their reports into #4471.</p>
-<p class="stamp">desk ref <b>DR-ZHZY-804M</b></p>
+<p class="stamp">desk ref <b>DR-GA0T-S1PA</b></p>
 </main><footer>Pages are written by people. Tables and charts are built from data at render time.</footer>
 </div></body></html>
