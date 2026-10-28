@@ -37,4 +37,4 @@ Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
 
 ## S01E03 follow-up
 
-The new triage page is `src/routes/kb/incidents/4471/causes/+page.svx`. Its rendered snapshot is `rendered/4471-causes.html`. The page uses the KB classifier to separate the causes in #4471 and deduplicates repeated report IDs before counting. The parser and hint follow-ups are tracked in #1 and #2.
+The new triage page is `src/routes/kb/incidents/4471/causes/+page.svx`. Its rendered snapshot is `rendered/4471-causes.html`. The page uses the KB classifier to separate the causes in #4471 and deduplicates repeated report IDs before counting. Issue #1 records the parser fix; issue #2 is not planned because booking-v3 was retired.

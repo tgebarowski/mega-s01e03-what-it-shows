@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · two date-handling causes'
 owner: support desk
-status: triaged
+status: closed
 reviewed: 2026-10-28
 signature: 'Codex harness'
 ---
@@ -14,7 +14,7 @@ signature: 'Codex harness'
 
 Ticket #4471 was marked known as one issue. The export contains overlapping rows, so the table below counts each report ID once and includes only reports merged into #4471. Cause assignment follows the KB's tenant locale, booking form, and report channel. The intake tag is only a guess and does not determine the cause.
 
-<CauseTable ticket={4471} assignments={{ parser: '#1', hint: '#2' }} />
+<CauseTable ticket={4471} assignments={{ parser: '#1 · fixed', hint: '#2 · not planned' }} />
 
 ## What the two causes mean
 
@@ -23,8 +23,12 @@ Ticket #4471 was marked known as one issue. The export contains overlapping rows
 
 The component also highlights the desk's one-day-move notes under the cause assigned by tenant metadata. A one-day-move description does not by itself establish a separate cause.
 
+## Engineering update
+
+The desk closed #4471 on 5 October. The `parser` cause was fixed by `fix(dates): parse dd/mm for eu locales`. The `hint` cause will not be fixed because the `booking-v3` form was retired.
+
 ## Triage
 
-Track the two causes as separate problems. Keep the original #4471 record as the merged ticket and preserve the KB classifier's distinction between the shared parser and the `booking-v3` form hint.
+Issue #1 records the parser fix. Issue #2 records the retired-form outcome. Keep both causes distinct in the KB even though the support desk first merged their reports into #4471.
 
 <RenderStamp {signature} />
